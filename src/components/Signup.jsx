@@ -1,4 +1,3 @@
-  
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -13,7 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
+// https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/sign-up
 
 const Copyright = () => {
     return (
@@ -28,7 +27,7 @@ const Copyright = () => {
     );
 }
   
-  const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
     paper: {
       marginTop: theme.spacing(8),
       display: 'flex',
@@ -47,7 +46,8 @@ const Copyright = () => {
       margin: theme.spacing(3, 0, 2),
     },
   }));
-  
+
+
 const Signup = () => {
     const classes = useStyles();
     return <>
@@ -139,5 +139,4 @@ const Signup = () => {
     </Container>
     </>
 }
-
 export default Signup
