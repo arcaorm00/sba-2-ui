@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux' // https://redux.js.org/ 리액트용 
 // redux: A Predictable State Container for JS Apps (상태 저장소)
 // 코드는 react에 있지만 useState, useDispatch 등은 redux에 속한다.
 // react와 redux 두가지 개념이 따로 존재하고 친밀하게 협력한다.
+import { addTodoAction } from '../store/todoReducer'
 
 const TodoInput = () => {
     // todo가 CRUD 대상(object)이다. -> TodoInput의 속성이 된다.
@@ -26,6 +27,7 @@ const TodoInput = () => {
         }
         addTodo(newTodo)
         setTodo("")
+        document.getElementById('input').value = ''
     }
     const handleChange = e => {
         e.preventDefault()
@@ -39,8 +41,8 @@ const TodoInput = () => {
         <h1>할 일 등록</h1>
         <form onSubmit={submitForm} method="POST">
             <div>
-                <input type="text" name="todo" onChange={handleChange}/>
-                <input type="submit" value="ADD TODO"/>
+                <input type="text" name="todo" id="input" onChange={handleChange}/>
+                <input type="submit" value="ADD_TODO"/>
             </div>
         </form>
     </>
